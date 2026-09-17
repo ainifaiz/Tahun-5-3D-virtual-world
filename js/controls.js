@@ -1,0 +1,5 @@
+// Joystick analog, dikosongkan apabila dialog dibuka atau fokus hilang.
+export function joystick(){const pad=document.querySelector('#joystick'),knob=document.querySelector('#knob');const axis={x:0,y:0};let id=null;
+const clear=()=>{id=null;axis.x=axis.y=0;knob.style.transform='translate(0px,0px)';};
+function move(e){const r=pad.getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2,len=Math.hypot(dx,dy),scale=len>42?42/len:1;axis.x=dx*scale/42;axis.y=-dy*scale/42;knob.style.transform=`translate(${dx*scale}px,${dy*scale}px)`;}
+pad.addEventListener('pointerdown',e=>{if(id!==null)return;e.preventDefault();id=e.pointerId;pad.setPointerCapture(id);move(e);});pad.addEventListener('pointermove',e=>{if(e.pointerId===id)move(e);});for(const event of ['pointerup','pointercancel','lostpointercapture'])pad.addEventListener(event,e=>{if(e.pointerId===id)clear();});window.addEventListener('blur',clear);document.addEventListener('visibilitychange',clear);return {axis,clear};}
