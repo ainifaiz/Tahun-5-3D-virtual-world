@@ -1,74 +1,95 @@
-# Misi Kesederhanaan: Kampung Harmoni 3D
+# 🏘️ Misi Kampung Sederhana
 
-Permainan penerokaan 3D Pendidikan Moral Tahun 5, dalam Bahasa Melayu. Dunia, watak dan hiasan voxel dibina daripada geometri asli; tiada aset Minecraft digunakan.
+Permainan penerokaan dunia 3D untuk Pendidikan Moral Tahun 5: **Nilai Kesederhanaan dalam Hidup Bermasyarakat**. Dibina dengan HTML, CSS, JavaScript ES Modules dan Three.js r170 yang disertakan secara setempat bersama lesen MIT. Tiada API key, login, backend, iklan, CDN atau proses build.
 
-## Bermain
+## Cara bermain
 
-Masukkan nama, mulakan pengembaraan dan tutup tutorial. Bergerak sendiri ke lokasi NPC mengikut peta. Dekati NPC dalam jarak 2.5 unit dan tekan E atau Interaksi.
+1. Taip nama (pilihan), tekan **MULAKAN MISI** dan baca panduan.
+2. Berjalan ke NPC bertanda ❗ di Pasar Raya, Rumah Terbuka, Taman Rekreasi, Pusat Internet dan Dewan Komuniti. Semua lokasi boleh dilawati dalam sebarang urutan.
+3. Dekati NPC dalam jarak 2.5 unit. Tekan E atau **BERCAKAP**.
+4. Baca dialog dan pilih tindakan sederhana. Jika kurang sesuai, cuba lagi tanpa kehilangan mata.
+5. Pilih perasaan atau tulis perasaan dan sebab sendiri. Misi hanya selesai selepas refleksi disimpan; setiap misi memberi 20 mata sekali sahaja.
+6. Selepas mendapat 100 mata, kembali ke Dewan Komuniti. Semua NPC berkumpul di sana. Bercakap dengan Kumar untuk penamat.
+7. Buka **Refleksi** untuk melihat catatan. **Misi → Main semula / Padam kemajuan** memulakan sesi murid seterusnya selepas pengesahan.
 
-- WASD / anak panah: bergerak relatif kepada kamera.
-- Shift: berjalan lebih pantas.
-- Seret tetikus pada dunia: putar kamera.
-- Tablet / telefon: gunakan D-pad dan seret kawasan dunia untuk kamera.
-- E / Interaksi: bercakap. Escape: tutup panel.
-- Misi: semak kemajuan, mulakan semula atau buka sijil setelah tamat.
-- Bunyi: hidup/matikan kesan bunyi sintesis; tiada fail audio luaran.
+## Kawalan
 
-Lima misi utama: Mei Ling (Pasar Raya), Kumar (Dewan Komuniti), Teck Seng (Pusat Internet), Aisyah (Rumah Terbuka) dan Ravi (Taman Rekreasi). Pak Cik Rahman berada di Balai Komuniti dengan misi bonus pertuturan.
+| Kawalan | Tindakan |
+|---|---|
+| W / ↑ | Maju mengikut arah kamera |
+| S / ↓ | Undur |
+| A / ←, D / → | Kiri / kanan |
+| Shift | Berlari perlahan |
+| Seret pada dunia | Putar kamera |
+| E / BERCAKAP | Berinteraksi dengan NPC berdekatan |
+| Joystick kiri | Bergerak pada telefon / tablet |
+| Escape | Tutup dialog |
 
-Jawapan tepat tanpa kesilapan menerima 20 mata. Selepas satu atau lebih jawapan kurang sesuai, jawapan tepat menerima 10 mata. Mata diberikan sekali sahaja selepas murid memilih perasaan. Bonus tidak menambah mata: maksimum kekal 100. Semua perasaan diterima.
-
-Selepas lima misi utama selesai, kembali kepada Kumar. Pilih sekurang-kurangnya tiga cara yang sesuai, nyatakan perasaan dan pilih sekurang-kurangnya satu janji. Upacara penamat dan sijil akan dibuka. Klik Cetak / Simpan PDF dan pilih pencetak atau destinasi Save as PDF dalam pelayar.
+Gunakan **Peta** untuk memaparkan atau menyembunyikan mini-map. Peta menunjukkan 🔵 pemain, ❗ misi belum selesai dan ✅ misi selesai. Bunyi sintesis boleh dihidupkan dengan **Bunyi**.
 
 ## GitHub Pages
 
-1. Ekstrak ZIP ini. Cipta atau buka repositori GitHub yang dikehendaki.
-2. Muat naik SEMUA kandungan projek, termasuk folder `assets`, ke akar repositori. Pastikan `index.html` berada terus pada akar, bukan dalam satu folder tambahan. Jangan muat naik ZIP sahaja.
-3. Commit fail ke cawangan `main`.
-4. Buka **Settings → Pages**. Dalam Source, pilih **Deploy from a branch**.
-5. Pilih **main** dan **/(root)**, kemudian **Save**.
-6. Tunggu proses penerbitan berjaya. Buka pautan yang dipaparkan di halaman Pages, biasanya `https://NAMA-PENGGUNA.github.io/NAMA-REPOSITORI/`.
+Jika menggunakan perubahan dalam pull request, semak dan gabungkan dahulu ke `main`.
 
-Panduan rasmi: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+Jika menggunakan ZIP:
+1. Ekstrak ZIP. Muat naik **kandungan** folder `misi-kampung-sederhana`, termasuk `js` dan `assets`, ke akar repositori.
+2. Pastikan `index.html`, `main.js` dan `style.css` berada terus di akar. Jangan muat naik ZIP sahaja.
+3. Commit ke `main`.
+4. Dalam GitHub, buka **Settings → Pages → Build and deployment**.
+5. Pilih **Deploy from a branch**, cawangan **main**, folder **/(root)**, lalu **Save**.
+6. Tunggu penerbitan berjaya dan buka pautan yang dipaparkan oleh GitHub Pages.
 
-GitHub Free menyokong Pages untuk repositori awam. Ketersediaan Pages untuk repositori persendirian bergantung pada pelan akaun. Projek ini statik: tiada backend, pangkalan data, API berbayar atau langkah build diperlukan.
+Panduan rasmi GitHub: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
-## Jalankan pada komputer sendiri
+## Jalankan setempat
 
-Gunakan pelayan HTTP statik. Dengan Python dipasang, jalankan arahan ini dalam folder projek:
+Dalam folder projek:
 
 ```sh
 python -m http.server 8000
 ```
 
-Kemudian buka `http://localhost:8000`. Membuka `index.html` melalui `file://` tidak disokong kerana projek menggunakan modul JavaScript. Selepas projek dimuat turun, pelayan tempatan tidak memerlukan internet. Three.js r170 disertakan dalam `assets/vendor` bersama lesennya.
+Buka `http://localhost:8000`. Jangan buka melalui `file://` kerana ES Modules memerlukan HTTP/HTTPS. Semua kebergantungan sudah disertakan; pelayan setempat boleh digunakan tanpa internet selepas fail dimuat turun.
 
-## Standard pembelajaran dan pentaksiran
+## Ubah kandungan
 
-- SK 13.0: Amalan Kesederhanaan dalam Hidup Bermasyarakat.
-- SP 13.2: Menjelaskan cara amalan kesederhanaan dalam hidup bermasyarakat.
-- SP 13.4: Mengekspresikan perasaan berkaitan dengan amalan kesederhanaan dalam hidup bermasyarakat.
-- SP 13.5: Mengamalkan sikap sederhana dalam hidup bermasyarakat.
+Edit `js/missions.js`. Satu objek bagi setiap stesen:
 
-Mod guru memaparkan pencapaian pemain setempat, bilangan jawapan kurang sesuai, perasaan dan refleksi. Simulasi dan janji menunjukkan pemahaman serta niat; amalan sebenar SP 13.5 perlu disahkan melalui pemerhatian guru.
+```js
+{
+  id: 'mei',                  // ID unik, kekalkan untuk simpanan
+  npc: 'Mei Ling',
+  place: 'Pasar Raya',
+  x: 24, z: 4,                // Lokasi NPC
+  question: 'Soalan...',
+  choices: ['Pilihan A', 'Pilihan B', 'Pilihan C'],
+  correctAnswer: 1,           // A=0, B=1, C=2
+  feedback: 'Maklum balas...',
+  feelingQuestion: 'Soalan perasaan...',
+  summary: 'Amalan yang dipelajari'
+}
+```
 
-## Kemajuan dan privasi
+Ganjaran lalai ditetapkan oleh `.map(m => ({...m,name:m.npc,points:20}))` di akhir senarai misi. Jika mengubah bilangan misi atau mata, selaraskan jumlah maksimum 100 dan kiraan 5 dalam UI. Untuk kandungan pelajaran baharu, ubah `KEY` supaya kemajuan lama tidak tersalah digunakan. Bangunan dan papan tanda berada di `js/world.js`; ubah juga bangunan jika memindahkan lokasi stesen. Gunakan teks guru yang dipercayai dalam konfigurasi; teks murid dipaparkan secara selamat.
 
-Nama, mata, perasaan, percubaan, refleksi, tetapan bunyi dan kedudukan disimpan menggunakan localStorage pada pelayar/peranti ini sahaja. Tiada data dihantar kepada pelayan. Satu rekod pemain bagi setiap pelayar dan alamat laman. Gunakan Mulakan semula untuk murid seterusnya. Mod peribadi, sekatan storan atau pemadaman data pelayar boleh menghilangkan kemajuan. Jika storan tidak tersedia, permainan masih berjalan dan memaparkan makluman.
+## Struktur
 
-## Fail projek
+- `index.html`, `style.css`: skrin permulaan, UI dan gaya responsif.
+- `main.js`: gelung permainan, kamera, pergerakan, collision, peta dan audio.
+- `js/player.js`: karakter geometri dan animasi berjalan.
+- `js/world.js`: dunia, jalan, bangunan, papan tanda 3D dan halangan.
+- `js/npc.js`: penduduk dan susunan perhimpunan akhir.
+- `js/quiz.js`: dialog dilema, percubaan semula dan refleksi.
+- `js/missions.js`: semua kandungan misi, ganjaran, pengesahan dan simpanan.
+- `js/controls.js`: joystick analog dan pembatalan input.
+- `js/ui.js`: panel misi, refleksi, bantuan dan penamat.
+- `assets/vendor`: Three.js dan lesen asal.
+- `assets/models`, `textures`, `audio`, `icons`: tempat aset tambahan. Versi ini menggunakan model, tekstur papan tanda dan audio yang dihasilkan melalui kod.
 
-- `index.html`: struktur skrin dan panel.
-- `style.css`: paparan responsif, kawalan sentuh dan cetakan sijil.
-- `game.js`: gelung 3D, pergerakan, kamera, collision, interaksi, peta dan audio.
-- `world.js`: bangunan, pokok, jalan dan hiasan voxel.
-- `characters.js`: model watak dan animasi.
-- `missions.js`: kandungan misi, pengiraan mata dan simpanan kemajuan.
-- `ui.js`: dialog, refleksi, mod guru, sijil dan penamat.
-- `assets/vendor/three.module.js`: Three.js r170, lesen MIT.
+## Simpanan dan peranti
 
-## Peranti dan penyelesaian masalah
+Kemajuan, nama, refleksi, kedudukan dan tetapan bunyi disimpan pada **pelayar dan peranti ini sahaja** melalui localStorage. Tiada rekod kelas berpusat. Jika storan disekat, permainan masih berjalan dengan makluman bahawa sesi tidak dapat disimpan. Menutup dialog sebelum refleksi tidak memberikan mata.
 
-Gunakan pelayar moden dengan WebGL 2 diaktifkan. Geometri dikongsi, tiada tekstur besar atau bayang dinamik dan nisbah piksel dihadkan kepada 1.5 untuk membantu prestasi. Kadar bingkai bergantung pada peranti; 60 FPS tidak dijamin.
+Memerlukan pelayar dengan WebGL 2 dan pecutan grafik. Nisbah piksel dihadkan kepada 1.5; prestasi bergantung pada peranti. Ujian paparan telefon menggunakan emulasi pelayar, bukan semua model telefon/Chromebook sebenar. Jika paparan gagal, semak semua fail dimuat naik dan WebGL 2 tersedia. Jika konteks grafik terhenti, muat semula halaman untuk menyambung simpanan terakhir.
 
-Jika dunia tidak dimuatkan, pastikan folder `assets/vendor` turut dimuat naik, gunakan HTTP/HTTPS dan semak WebGL atau pecutan perkakasan pelayar. Nama fail adalah sensitif huruf besar/kecil pada GitHub Pages. Bunyi hanya bermula selepas interaksi pengguna.
+Permainan menyokong pemahaman dan refleksi. Guru boleh meminta murid menjelaskan pilihan dan memerhatikan amalan sebenar selepas aktiviti.

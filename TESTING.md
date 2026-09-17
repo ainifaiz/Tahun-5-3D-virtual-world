@@ -1,19 +1,23 @@
-# Catatan pengujian
+# Laporan ujian — Misi Kampung Sederhana
 
-Diuji pada 17 September 2026 menggunakan Chromium headless dengan WebGL perisian.
+Diuji pada 17 September 2026 menggunakan Chromium tanpa antara muka, Playwright dan WebGL melalui SwiftShader.
 
-Lulus:
-- Pemuatan Three.js tempatan dan paparan dunia 3D.
-- Pergerakan papan kekunci dan pergerakan D-pad melalui acara sentuh sebenar pelayar.
-- Semakan collision pada bangunan dan laluan terbuka.
-- Keenam-enam aliran dialog misi; ujian memindahkan pemain ke berhampiran NPC sebelum berinteraksi.
-- Jawapan kurang sesuai, percubaan semula, mata 10/20 dan pencegahan mata berulang.
-- Jumlah 90/100 untuk satu misi dengan kesilapan; bonus tidak menambah mata.
-- Pemulihan kemajuan selepas muat semula halaman.
-- Penolakan refleksi kosong dan pilihan berlebihan.
-- Pilihan perasaan, janji, penamat dan akses sijil selepas muat semula.
-- Penyediaan kandungan cetakan sijil dengan nama yang disunting.
-- Pemeriksaan visual skrin permulaan, dunia, sijil, mod guru dan paparan telefon 390 × 844.
-- Tiada ralat JavaScript semasa aliran ujian.
+## Lulus
 
-Had ujian: belum diterbitkan ke repositori GitHub; tidak diuji pada perkakasan sekolah sebenar, pencetak fizikal atau semua jenis pelayar. Prestasi 60 FPS tidak diukur. Dialog cetakan dipintas dalam ujian automatik; kandungan cetakan disahkan.
+- Dunia Three.js dan skrin permulaan berjaya dimuatkan dengan aset setempat.
+- Input papan kekunci menggerakkan pemain; joystick analog menggerakkan pemain dalam emulasi telefon.
+- Semakan collision menolak kedudukan dalam bangunan dan di luar sempadan.
+- Kelima-lima NPC membuka dilema masing-masing apabila pemain berada berdekatan.
+- Jawapan kurang sesuai memaparkan CUBA LAGI; percubaan seterusnya masih memperoleh 20 mata.
+- Refleksi pilihan dan refleksi bertulis (perasaan + sebab) disimpan dan dipaparkan.
+- Lima misi menghasilkan 100 mata; berinteraksi semula tidak menggandakan mata.
+- Semua NPC berkumpul di Dewan Komuniti; interaksi Kumar membuka penamat.
+- Muat semula halaman mengekalkan kemajuan dan 100 mata.
+- Reset memulakan semula pada 0 mata.
+- Data localStorage rosak atau tidak tersedia dikendalikan tanpa exception yang terlepas.
+- Paparan 1365×900 dan 390×844 diperiksa; tiada limpahan mendatar pada telefon.
+- Tiada ralat konsol atau pageerror direkodkan sepanjang ujian pelayar.
+
+## Skop dan had
+
+Ujian aliran misi memindahkan pemain ke sekitar NPC melalui objek runtime, kemudian menggunakan butang interaksi dan pilihan sebenar. Input berjalan dan joystick diuji berasingan. Semakan collision ialah sampel bangunan/sempadan, bukan setiap tepi objek. Paparan telefon ialah emulasi Chromium, bukan ujian perkakasan Android/iOS/Chromebook sebenar. Prestasi dan WebGL bergantung pada peranti. Penerbitan GitHub Pages belum disahkan untuk cabang baharu; perlu merge dan tetapan Pages yang sesuai.
